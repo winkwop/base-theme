@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Renkler",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Ana Renk",
+        "default": "#3b82f6"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Yazı Rengi",
+        "default": "#111827"
+      }
+    ]
+  },
+  {
+    "name": "Hero Alanı",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hero_title",
+        "label": "Başlık",
+        "default": "Mağazamıza Hoşgeldiniz"
+      }
+    ]
+  }
+]

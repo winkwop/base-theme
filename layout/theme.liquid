@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {{ page_title }}
+      -
+      {{ shop.name }}
+    </title>
+
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+
+    <style>
+      :root {
+        --primary-color: {{ settings.primary_color }};
+        --text-color: {{ settings.text_color }};
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="/">{{ shop.name }}</a>
+      </div>
+      <nav>
+        <ul>
+          {% for link in linklists.main_menu %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    <footer>
+      <p>&copy; 2024 {{ shop.name }}. Winkwop altyapısı ile hazırlanmıştır.</p>
+    </footer>
+
+    <script src="{{ 'script.js' | asset_url }}"></script>
+    <script src="{{ 'theme.bundled.js' | asset_url }}" defer></script>
+  </body>
+</html>
